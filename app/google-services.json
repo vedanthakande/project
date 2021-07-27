@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "697905313494",
+    "project_id": "ecomshoppingapp-c9fbf",
+    "storage_bucket": "ecomshoppingapp-c9fbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697905313494:android:9dae9e4b18ae829951fb77",
+        "android_client_info": {
+          "package_name": "com.capi.ecomshoppingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697905313494-1q11tqrgqbvge89nlmifjiscif7vkd5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEiN6jtK31xroigY31K0j_bbEt-Mhlnxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697905313494-1q11tqrgqbvge89nlmifjiscif7vkd5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

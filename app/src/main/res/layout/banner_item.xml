@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="4dp"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:src="@drawable/image50"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/delete_banner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:textSize="15sp"
+        android:text="Delete"
+        android:fontFamily="@font/poppins_bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/rating_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/profile_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rating_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Laura Octavian"
+        android:textColor="@color/dark"
+        android:textSize="17sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/rating_image"
+        app:layout_constraintTop_toTopOf="@+id/rating_image" />
+
+    <RatingBar
+        android:id="@+id/star_container"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:progressTint="@color/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/rating_name"
+        app:layout_constraintTop_toBottomOf="@+id/rating_name" />
+
+    <ImageView
+        android:id="@+id/delete_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trash"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rating_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="This is really amazing product, i like the design of product, I hope can buy it again"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_image" />
+
+    <TextView
+        android:id="@+id/rating_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="July 2, 2020"
+        android:textColor="@color/grey"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

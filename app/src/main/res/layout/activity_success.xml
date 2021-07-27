@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SuccessActivity">
+
+        <ImageView
+            android:id="@+id/delete_alert_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="3dp"
+            android:src="@drawable/success"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/delete_alert_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/success_screen_title"
+            android:textColor="@color/dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/delete_alert_img"
+            app:layout_constraintStart_toStartOf="@+id/delete_alert_img"
+            app:layout_constraintTop_toBottomOf="@+id/delete_alert_img" />
+
+        <TextView
+            android:id="@+id/delete_alert_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/order_success_msg"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delete_alert_title" />
+
+        <TextView
+            android:id="@+id/order_date_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Date"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delete_alert_msg" />
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="12/07/2020"
+            android:textColor="@color/dark"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delete_alert_msg" />
+
+        <TextView
+            android:id="@+id/order_id_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Order Id"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_date_txt" />
+
+        <TextView
+            android:id="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="SB424TU"
+            android:textColor="@color/dark"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_date" />
+
+        <TextView
+            android:id="@+id/order_items_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Items(2)"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_id_txt" />
+
+        <TextView
+            android:id="@+id/order_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="100"
+            android:textColor="@color/dark"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+    <TextView
+        android:id="@+id/order_subtotal_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Rs"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/order_subtotal"
+        app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light"
+            app:layout_constraintEnd_toEndOf="@+id/order_subtotal"
+            app:layout_constraintStart_toStartOf="@+id/order_items_txt"
+            app:layout_constraintTop_toBottomOf="@+id/order_subtotal" />
+
+        <TextView
+            android:id="@+id/order_price_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Total Price"
+            android:textColor="@color/dark"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="120"
+            android:textColor="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/order_price_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/currency"
+            android:textColor="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_price"
+            app:layout_constraintEnd_toStartOf="@+id/order_price"
+            app:layout_constraintTop_toTopOf="@+id/order_price" />
+
+        <Button
+            android:id="@+id/back_to_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="14dp"
+            android:text="@string/back_to_home_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/order_price"
+            app:layout_constraintStart_toStartOf="@+id/order_price_txt"
+            app:layout_constraintBottom_toTopOf="@+id/order_delivery_msg" />
+
+    <TextView
+        android:id="@+id/order_delivery_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Expected Delivery within 2-3 days"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/back_to_home"
+        app:layout_constraintStart_toStartOf="@+id/back_to_home"
+        android:layout_marginBottom="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".admin.AddProductsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add Product"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <View
+        android:id="@+id/divider"
+        android:background="@color/light"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_placeholder"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/product_name_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Product Name"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:maxLines="2"
+        android:hint="e.g: Sample Product"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/product_name_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_txt" />
+
+    <TextView
+        android:id="@+id/product_description_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:text="Product Description"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="top"
+        android:hint="e.g: This is a sample product"
+        android:maxLines="5"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_description_txt" />
+
+    <TextView
+        android:id="@+id/product_price_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Product Price"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="150dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:textColorHint="@color/grey"
+        android:hint="e.g: 120"
+        android:inputType="number"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintStart_toStartOf="@+id/product_price_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_txt" />
+
+    <TextView
+        android:id="@+id/product_discount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Before Discount Price"
+        android:textColor="@color/dark"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toEndOf="@+id/product_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_description" />
+
+    <EditText
+        android:id="@+id/product_discount"
+        android:layout_width="150dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:textColorHint="@color/grey"
+        android:hint="e.g: 150"
+        android:visibility="gone"
+        android:inputType="number"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintStart_toStartOf="@+id/product_discount_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_discount_txt" />
+
+    <TextView
+        android:id="@+id/product_discount_ratio_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Discount Percentage"
+        android:textColor="@color/dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_price" />
+
+    <EditText
+        android:id="@+id/product_discount_ratio"
+        android:layout_width="150dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:textColorHint="@color/grey"
+        android:hint="1 - 100"
+        android:visibility="gone"
+        android:inputType="number"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintStart_toStartOf="@+id/product_discount_ratio_txt"
+        app:layout_constraintTop_toBottomOf="@+id/product_discount_ratio_txt" />
+
+        <CheckBox
+            android:id="@+id/isDiscounted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/grey"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Discount Available"
+            android:textColor="@color/dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_discount_ratio" />
+
+        <Button
+            android:id="@+id/save_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="16dp"
+            android:text="Add Product"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isDiscounted" />
+
+        <ProgressBar
+            android:id="@+id/add_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue"
+            app:layout_constraintTop_toTopOf="@+id/save_product"
+            app:layout_constraintStart_toStartOf="@+id/save_product"
+            app:layout_constraintEnd_toEndOf="@+id/save_product"
+            app:layout_constraintBottom_toBottomOf="@+id/save_product" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

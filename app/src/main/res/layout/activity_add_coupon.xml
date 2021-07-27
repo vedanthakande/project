@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".admin.AddCouponActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add Coupon"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <View
+        android:id="@+id/divider"
+        android:background="@color/light"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <ImageView
+        android:id="@+id/coupon_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/bigoffer"
+        android:tint="@color/blue"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/coupon_code_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Coupon code"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/coupon_code"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:singleLine="true"
+        android:hint="e.g: 2020SALE"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:maxLength="10"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coupon_code_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_code_txt" />
+
+    <TextView
+        android:id="@+id/coupon_code_not"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:text="2020SALE"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coupon_code_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_code_txt" />
+
+    <TextView
+        android:id="@+id/coupon_price_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_code"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Coupon Price"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/coupon_price"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:inputType="number"
+        android:hint="e.g: 100"
+        android:singleLine="true"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coupon_price_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_price_txt" />
+
+    <TextView
+        android:id="@+id/coupon_min_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_price"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Minimum Order Price"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/coupon_min"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:inputType="number"
+        android:hint="e.g: 200"
+        android:singleLine="true"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coupon_min_txt"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_min_txt" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="16dp"
+            android:text="Add Coupon"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coupon_min" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/search_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/order_id"
+        android:text="LQNSU346JK"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Order at:"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/order_id"
+        app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+    <TextView
+        android:id="@+id/order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="6dp"
+        android:text="20/Jun/2020"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/order_date_txt"
+        app:layout_constraintStart_toEndOf="@+id/order_date_txt"
+        app:layout_constraintTop_toTopOf="@+id/order_date_txt" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_date_txt" />
+
+    <TextView
+        android:id="@+id/order_status_txt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider11" />
+
+    <TextView
+        android:id="@+id/order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/order_status_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/order_status_txt" />
+
+    <TextView
+        android:id="@+id/order_items_txt"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Items"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_status_txt" />
+
+    <TextView
+        android:id="@+id/order_items_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Items Purchased"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/order_items_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/order_items_txt" />
+
+    <TextView
+        android:id="@+id/order_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="2"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/order_items_text"
+        app:layout_constraintEnd_toStartOf="@+id/order_items_text"
+        app:layout_constraintTop_toTopOf="@+id/order_items_text" />
+
+    <TextView
+        android:id="@+id/order_price_txt"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_items_txt" />
+
+    <TextView
+        android:id="@+id/order_price_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/order_price"
+        app:layout_constraintEnd_toStartOf="@+id/order_price"
+        app:layout_constraintTop_toTopOf="@+id/order_price" />
+
+    <TextView
+        android:id="@+id/order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="299.99"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/order_price_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/order_price_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Enter Your Email"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_edittext"
+        android:background="@drawable/search_background"
+        android:padding="12dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/save_email"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_bg"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext" />
+
+    <Button
+        android:id="@+id/cancel_email"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/search_background"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/save_email"
+        app:layout_constraintEnd_toStartOf="@+id/save_email"
+        app:layout_constraintTop_toTopOf="@+id/save_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

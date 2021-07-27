@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@drawable/search_background">
+
+    <TextView
+        android:id="@+id/address_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="3711 Spring Hill Rd undefined Tallahassee, Navada 52874 United States"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:maxLines="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/edit_address_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/address_area"
+        app:layout_constraintTop_toBottomOf="@+id/address_area" />
+
+    <ImageView
+        android:id="@+id/delete_address_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/trash"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_address_btn"
+        app:layout_constraintStart_toEndOf="@+id/edit_address_btn"
+        app:layout_constraintTop_toTopOf="@+id/edit_address_btn" />
+
+    <CheckBox
+        android:id="@+id/select_address_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_address_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:buttonTint="@color/blue"
+        android:checked="true"
+        app:layout_constraintTop_toTopOf="@+id/delete_address_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
